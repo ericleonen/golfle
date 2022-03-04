@@ -19,10 +19,11 @@ export const App = () => {
             <AnswerModal />
             <Shader />
 
-            <Title />
-            <Input />
-
-            <Guesses />
+            <div className="content">
+                <Title />
+                <Input />
+                <Guesses />
+            </div>
         </div>
     );
 }
