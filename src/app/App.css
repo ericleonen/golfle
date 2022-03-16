@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.toggle-silhouette-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--dark-green);
+    font-weight: bold;
+    color: var(--dark-green);
+    letter-spacing: 0.7px;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+.fader-enter {
+    opacity: 0;
+}
+
+.fader-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.fader-exit {
+    opacity: 1;
+}
+
+.fader-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

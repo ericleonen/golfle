@@ -1,0 +1,27 @@
+.Shader {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    opacity: 0.75;
+}
+
+.Shader-enter {
+    opacity: 0;
+}
+
+.Shader-enter-active {
+    opacity: 0.75;
+    transition: opacity 300ms;
+}
+
+.Shader-exit {
+    opacity: 0.75;
+}
+
+.Shader-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

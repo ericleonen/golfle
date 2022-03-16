@@ -1,0 +1,32 @@
+.HowToPlayModal {
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    padding: 50px;
+}
+
+.HowToPlayModal h3 {
+    margin-bottom: 20px;
+    color: var(--dark-green);
+}
+
+.HowToPlayModal li {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+li .green {
+    color: white;
+    background-color: rgb(9, 206, 9);
+    padding: 2px 5px;
+}
+
+li .yellow {
+    background-color: rgb(247, 247, 159);
+    padding: 2px 5px;
+}
+

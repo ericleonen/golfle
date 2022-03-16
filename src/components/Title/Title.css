@@ -1,0 +1,13 @@
+.Title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.Title > h1 {
+    font-size: 3em;
+    letter-spacing: 0.9px;
+}
+
+.Title > h2 {
+    font-weight: normal;
+}

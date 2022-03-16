@@ -1,0 +1,19 @@
+@import '../../assets/colors.css';
+
+.Header {
+    height: 40px;
+    width: 100%;
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+}
+
+.Header > button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 0 28px;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}

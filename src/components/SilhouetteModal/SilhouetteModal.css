@@ -1,0 +1,32 @@
+.SilhouetteModal {
+    height: 350px;
+    width: min-content;
+    padding-right: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    box-shadow: 2px 2px 15px rgb(37, 37, 37);
+    display: flex;
+    white-space: nowrap;
+}
+
+.SilhouetteModal .message-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.SilhouetteModal h3 {
+    color: var(--dark-green);
+}
+
+.SilhouetteModal .player-photo {
+    max-height: 100%;
+    filter: brightness(0);
+    user-select: none;
+    pointer-events: none;
+}

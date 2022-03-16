@@ -1,0 +1,84 @@
+.AnswerModal {
+    height: 350px;
+    width: min-content;
+    padding-right: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    box-shadow: 2px 2px 15px rgb(37, 37, 37);
+    display: flex;
+    white-space: nowrap;
+}
+
+.img-container {
+    height: 100%;
+    display: flex;
+}
+
+.message-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 40px 0;
+}
+
+.message-container > p {
+    font-size: 1.2em;
+    width: 100%;
+    height: 1.2em;
+}
+
+.message-container > h3 {
+    width: 100%;
+    font-size: 2.3em;
+    margin: 8px 0;
+}
+
+.player-photo {
+    max-height: 100%;
+}
+
+.share-btn {
+    padding: 15px 20px; 
+    background-color: var(--dark-green);
+    border: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.share-btn ~ span {
+    margin-left: 20px;
+}
+
+.message-container > h4 {
+    font-size: 1.4em;
+    width: 100%;
+}
+
+.share-btn ~ p {
+    font-size: 1.1em;
+}
+
+#win {
+    background-color: rgb(211, 231, 211);
+}
+
+#win h3 {
+    color: green;
+}
+
+#lose {
+    background-color: rgb(241, 215, 215);
+}
+
+#lose h3 {
+    color: rgb(206, 26, 26);
+}
+

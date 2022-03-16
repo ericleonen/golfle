@@ -1,0 +1,15 @@
+.Input > input {
+    height: 65px;
+    width: 470px;
+    padding: 20px;
+    font-size: 1.1em;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 0px !important;
+    outline: none !important;
+    border: 1.5px solid black;
+}
+
+.Input > input:disabled {
+    background-color: white;
+}

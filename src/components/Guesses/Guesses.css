@@ -1,0 +1,25 @@
+.Guesses {
+    max-height: calc(100vh - 500px);
+    display: flex;
+    width: 650px;
+    border-top: 3px solid var(--dark-green);
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+}
+
+.labels {
+    width: 650px;
+    padding: 2px 20px;
+    margin-top: 50px;
+}
+
+.labels > span {
+    width: 16.66%;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: 0.9em;
+    color: var(--dark-green)
+}

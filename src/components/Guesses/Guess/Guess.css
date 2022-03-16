@@ -1,0 +1,90 @@
+@import '../../../assets/colors.css';
+
+.Guess {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--light-green);
+    padding-bottom: 0px;
+}
+
+.Guess > h3 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.Guess > div {
+    width: 16.66%;
+    text-align: center;
+    background-color: var(--light-gray);
+    font-size: 0.9em;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Guess > div.correct {
+    background-color: rgb(9, 206, 9);
+    color: white;
+}
+
+.Guess > div.close {
+    background-color: rgb(247, 247, 159);
+}
+
+.arrow {
+    width: 100%;
+    font-size: 0.8em;
+}
+
+.Guess p {
+    width: 100%;
+}
+
+.name {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.cntry {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.height {
+    animation: fadeIn 0.9s ease-out;
+}
+
+.age {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.debut {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.owgr {
+    animation: fadeIn 1.8s ease-out;
+}
+
+.fedex {
+    animation: fadeIn 2.1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.failure > div.correct {
+    background-color: rgb(212, 64, 64);
+}
+
+.failure > h3 {
+    color: rgb(212, 64, 64);
+}

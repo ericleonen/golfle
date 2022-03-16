@@ -1,0 +1,38 @@
+.StatsModal {
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 2;
+    box-shadow: 2px 2px 15px rgb(37, 37, 37);
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 20px;
+}
+
+.StatsModal div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 37%;
+    
+}
+
+.StatsModal div h3 {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.8px;
+    font-size: 1.3em;
+}
+
+.StatsModal div p {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--dark-green);
+}
