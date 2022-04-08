@@ -1,7 +1,12 @@
+.guesses-container {
+    width: 90vw;
+    max-width: 650px;
+}
+
 .Guesses {
     max-height: calc(100vh - 500px);
     display: flex;
-    width: 650px;
+    width: 100%;
     border-top: 3px solid var(--dark-green);
     overflow-y: scroll;
     flex-wrap: wrap;
@@ -9,7 +14,7 @@
 }
 
 .labels {
-    width: 650px;
+    width: 100%;
     padding: 2px 20px;
     margin-top: 50px;
 }

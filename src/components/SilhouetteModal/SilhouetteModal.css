@@ -30,3 +30,37 @@
     user-select: none;
     pointer-events: none;
 }
+
+@media screen and (max-width: 600px) {
+    .SilhouetteModal {
+        width: 65vw;
+        height: 220px;
+    }
+
+    .SilhouetteModal h3 {
+        font-size: 1.6em;
+    }
+
+    .SilhouetteModal p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .SilhouetteModal {
+        flex-wrap: wrap-reverse;
+        width: 70vw;
+        padding-right: 0;
+        height: min-content;
+    }
+
+    .SilhouetteModal .message-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    .SilhouetteModal .player-photo {
+        width: 100%;
+        height: min-content;
+    }
+}

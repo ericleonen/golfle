@@ -38,6 +38,6 @@ export const selectPlayerData = (name) => {
 }
 export const selectPlayerNames = (state) => Object.keys(state.playerData.playerData);
 
-export const selectIsDataReady = (state) => state.playerData.playerNames.length > 0;
+export const selectIsDataReady = (state) => state.playerData.playerNames.length > 0 && state.app.playerAnswer.length > 0;
 
 export default playerDataSlice.reducer;

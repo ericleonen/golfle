@@ -1,6 +1,9 @@
 .Suggestions {
     position: absolute;
-    width: 470px
+    width: 45vw;
+    max-width: 470px;
+    min-width: 250px;
+    z-index: 3;
 }
 
 .suggestedName {

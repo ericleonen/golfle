@@ -1,6 +1,6 @@
 const { linksScraper } = require('./linksScraper');
 const { playerScraper } = require('./playerScraper');
-const { setData } = require('./firebase');
+const { setData, randomizePlayerAnswers } = require('../src/features/firebase');
 
 const scraper = async () => {
     console.log('scraping urls...');
@@ -14,4 +14,4 @@ const scraper = async () => {
     setData(playersData);
 }
 
-scraper();
+randomizePlayerAnswers();

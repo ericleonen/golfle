@@ -17,7 +17,7 @@ export const Guesses = () => {
     }, [guesses])
 
     return (
-        <>
+        <div className="guesses-container">
             <div className="labels">
                 <span>CNTRY</span>
                 <span>HEIGHT</span>
@@ -43,6 +43,6 @@ export const Guesses = () => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     );
 }

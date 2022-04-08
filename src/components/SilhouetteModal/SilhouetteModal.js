@@ -18,7 +18,7 @@ export const SilhouetteModal = () => {
             <div className="SilhouetteModal">
                 <CloseButton type="Silhouette"/>
                 <div className="img-container">
-                    <img src={photo} className='player-photo' alt="hint"></img>
+                    <img src={photo} className='player-photo' alt="hint" />
                 </div>
                 <div className="message-container">
                     <p>Who is this</p>

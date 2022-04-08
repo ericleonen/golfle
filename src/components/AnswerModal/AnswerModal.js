@@ -51,7 +51,7 @@ export const AnswerModal = () => {
 
         const date = `${mm}/${dd}/${yyyy}`;
 
-        const nGuesses = numGuesses < 9 ? numGuesses : 'X';
+        const nGuesses = numGuesses < 9 ? numGuesses - 1 : 'X';
         let guessRep = '';
         for (let i = 0; i < numGuesses - 1; i++) {
             const row = guessData[i].cntry + guessData[i].height + guessData[i].age + guessData[i].debut + guessData[i].owgr + guessData[i].fedex;

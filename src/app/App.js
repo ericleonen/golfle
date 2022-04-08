@@ -11,7 +11,7 @@ import './App.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPlayerData, selectIsDataReady } from '../features/playerDataSlice';
-import { selectGameStatus, selectIsAnswerModal, selectIsHowToPlayModal, selectIsSilhouetteModal, selectIsStatsModal, setDailyData, toggleModal } from '../features/appSlice';
+import { fetchPlayerAnswer, selectGameStatus, selectIsAnswerModal, selectIsHowToPlayModal, selectIsSilhouetteModal, selectIsStatsModal, setDailyData, setPlayerAnswer, toggleModal } from '../features/appSlice';
 import { SilhouetteModal } from '../components/SilhouetteModal/SilhouetteModal';
 import { Loader } from '../components/Loader/Loader'; 
 
@@ -29,6 +29,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(fetchPlayerData());
+        dispatch(fetchPlayerAnswer());
 
         if (localStorage.hasOwnProperty('lastPlayed')) {
             const lastPlayed = new Date(localStorage.getItem('lastPlayed'));
@@ -38,7 +39,7 @@ const App = () => {
                 lastPlayed.getMonth() !== now.getMonth() ||
                 lastPlayed.getDate() !== now.getDate()) {
                 localStorage.removeItem('guesses');
-                localStorage.removeItem('gameStatus')
+                localStorage.removeItem('gameStatus');
             }
         }
 

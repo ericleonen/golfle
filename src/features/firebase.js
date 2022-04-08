@@ -1,5 +1,5 @@
-const { initializeApp } = require('firebase/app');
-const { getFirestore, collection, doc, setDoc, getDoc } = require('firebase/firestore');
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, doc, setDoc, getDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAKklt9wnZ7b3mH66FJONX_l_9pO4oQJqM",
@@ -13,26 +13,41 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-const setData = async (data) => {
+export const setData = async (data) => {
     const dataRef = collection(db, 'data');
 
     await setDoc(doc(dataRef, 'players'), data);
 }
 
-const getPlayerData = async () => {
+export const getPlayerData = async () => {
     const docRef = doc(db, 'data', 'players');
     const docSnap = await getDoc(docRef);
 
     return docSnap.data();
 }
 
-const getRandomPlayer = async () => {
-    const playerData = await getPlayerData();
-    const playerNames = Object.keys(playerData);
+export const randomizePlayerAnswers = async () => {
+    const docRef = doc(db, 'data', 'answers');
+    const docSnap = await getDoc(docRef);
 
-    return playerNames[Math.floor(Math.random() * playerNames.length)];
+    const answers = docSnap.data().playerAnswers;
+    answers.sort(() => Math.random() - 0.5);
+
+    await setDoc(docRef, {
+        playerAnswers: answers
+    });
 }
 
-exports.setData = setData;
-exports.getPlayerData = getPlayerData;
-exports.getRandomPlayer = getRandomPlayer;
+export const getPlayerAnswer = async () => {
+    const begin = new Date('3/16/2022');
+    const today = new Date();
+    const diffTime = Math.abs(today - begin);
+    const i = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    const docRef = doc(db, 'data', 'answers');
+    const docSnap = await getDoc(docRef);
+
+    const answer = docSnap.data().playerAnswers[i];
+
+    return answer;
+}

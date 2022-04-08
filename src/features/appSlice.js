@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { getPlayerAnswer } from "./firebase";
 
 const initialState = {
     isStatsModal: false,
@@ -7,7 +8,7 @@ const initialState = {
     isSilhouetteModal: false,
     guesses: [],
     numGuesses: 1,
-    playerAnswer: 'Maverick McNealy',
+    playerAnswer: 'Dustin Johnson',
     gameStatus: 'still playing',
     guessData: {}
 };
@@ -17,6 +18,11 @@ const setDailyStorage = (guesses, gameStatus) => {
     localStorage.setItem('gameStatus', gameStatus);
     localStorage.setItem('lastPlayed', new Date());
 };
+
+export const fetchPlayerAnswer = createAsyncThunk('app/fetchPlayerAnswer', async () => {
+    const playerAnswer = await getPlayerAnswer();
+    return playerAnswer;
+});
 
 const addGamesPlayed = (didWin) => {
     if (localStorage.hasOwnProperty('gamesPlayed')) {
@@ -77,6 +83,11 @@ const appSlice = createSlice({
             }
             state.guessData[action.payload.n][action.payload.category] = action.payload.value;
         }
+    },
+    extraReducers: {
+        [fetchPlayerAnswer.fulfilled]: (state, action) => {
+            state.playerAnswer = action.payload;
+        }
     }
 });
 
@@ -92,6 +103,6 @@ export const selectGuessData = (state) => state.app.guessData;
 
 export const selectGameStatus = (state) => state.app.gameStatus;
 
-export const { addGuess, toggleModal, setDailyData, addGuessData } = appSlice.actions;
+export const { addGuess, toggleModal, setDailyData, addGuessData, setPlayerAnswer } = appSlice.actions;
 
 export default appSlice.reducer;

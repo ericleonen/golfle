@@ -1,6 +1,8 @@
 .Input > input {
     height: 65px;
-    width: 470px;
+    width: 45vw;
+    max-width: 470px;
+    min-width: 250px;
     padding: 20px;
     font-size: 1.1em;
     margin-top: 25px;
